@@ -7,6 +7,8 @@
     <title>jinja tags</title>
 </head>
 <body>
+    
+<!--
     <center>
         <h1>conditional statements</h1>
         {% if a > 10 %}
@@ -14,5 +16,48 @@
             <h1>{{a}}</h1>
        {% endif %}
     </center>
+-->
+<!--
+<h1>if-else</h1>
+{% if a > b %}
+    <h2>inside if block</h2>
+    <h2>{{a}}</h2>
+{% else %}
+    <h2>i am in else block</h2>
+    <h2>{{b}}</h2>
+{% endif %}
+-->
+<!--
+<h1>if-elif condition</h1>
+{% if a > b and a > c %}
+    <h2>inside elif block</h2>
+    <h2>{{a}}</h2>
+{% elif condition %}
+    <h2>i am in elif block</h2>
+    <h2>{{b}]</h2>
+{% else %}
+    <h2>i am in elif block</h2>
+    <h2>{{c}}</h2>
+{% endif %}
+-->
+<h1>nested-if condition</h1>
+{% if a > b and b > c %}
+    {% if condition %}
+    <h2>inside nested-if block</h2>
+    <h2>{{a}}</h2>
+    {% else %}
+    <h2>i am in nested-if block</h2>
+    {{b}}
+    {% endif %}
+{% else %}
+    {% if condition %}
+    <h2>inside nested-if block</h2>
+    <h2>{{a}}</h2>
+    {% else %}
+    <h2>i am in nested-if block</h2>
+    <h2>{{b}}</h2>
+    {% endif %}
+{% endif %}
+
 </body>
 </html>
